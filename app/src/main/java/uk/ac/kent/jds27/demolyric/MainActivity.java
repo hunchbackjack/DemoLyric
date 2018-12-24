@@ -1,6 +1,7 @@
 package uk.ac.kent.jds27.demolyric;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,19 +18,24 @@ public class MainActivity extends AppCompatActivity {
     private final Play play = new Play();
     private TextView lyricString;
     private TextView turnCount;
+    private TextView timer;
     private Button playButton;
     private Button playAgainButton;
     private Button helpButton;
     private Button turnSubmit;
+    private Button timeSubmit;
     private ConstraintLayout addSongConstraint;
     private ConstraintLayout howToConstraint;
     private EditText addLyric;
     private EditText addSong;
     private EditText addArtist;
     private EditText editTurn;
+    private EditText editTime;
     private int count = 0;
     private int goCount = 20;
+    private int timeCount = 11000;
     private final ArrayList<String> addSongs = new ArrayList<>();
+    private CountDownTimer cTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         editTurn = findViewById(R.id.editTurn);
         turnSubmit = findViewById(R.id.turnSubmit);
         howToConstraint = findViewById(R.id.howToConstraint);
+        timer = findViewById(R.id.timer);
+        cTimer = null;
+        timeSubmit = findViewById(R.id.timeSubmit);
+        editTime = findViewById(R.id.editTime);
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -54,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         count++;
         turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
         helpButton.setVisibility(View.INVISIBLE);
+        if(cTimer != null) { cTimer.cancel(); }
         if(count >= goCount) {
             lyricString.setText(getString(R.string.game_complete));
             playButton.setVisibility(View.INVISIBLE);
@@ -63,6 +74,16 @@ public class MainActivity extends AppCompatActivity {
             playButton.setText(getString(R.string.next));
             String turn = play.haveGo();
             lyricString.setText(turn);
+            cTimer = new CountDownTimer(timeCount, 1000) {
+
+                public void onTick(long millisUntilFinished) {
+                    timer.setText("" + millisUntilFinished / 1000);
+                }
+
+                public void onFinish() {
+                    timer.setText("0");
+                }
+            }.start();
         }
     }
 
@@ -110,6 +131,26 @@ public class MainActivity extends AppCompatActivity {
     public void changeTurnCount(View view) {
         editTurn.setVisibility(View.VISIBLE);
         turnSubmit.setVisibility(View.VISIBLE);
+    }
+
+    public void submitTimeCount(View view) {
+        String value = editTime.getText().toString();
+
+        try{
+            int time = Integer.parseInt(value);
+                timeCount = time * 1000;
+        }catch (NumberFormatException ex) {
+            Toast toast = Toast.makeText(this, "Please input a number", Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+        editTime.setVisibility(View.INVISIBLE);
+        timeSubmit.setVisibility(View.INVISIBLE);
+    }
+
+    public void changeTimeCount(View view) {
+        editTime.setVisibility(View.VISIBLE);
+        timeSubmit.setVisibility(View.VISIBLE);
     }
 
     public void submitTurnCount(View view) {
