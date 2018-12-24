@@ -3,17 +3,14 @@ package uk.ac.kent.jds27.demolyric;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
-public class LyricAndAnswers
+class LyricAndAnswers
 {
-    //Arraylist to hold song lyrics
-    private ArrayList<String> lyrics = new ArrayList<String>();
-    int lyricIndex = 0;
+    private final ArrayList<String> lyrics = new ArrayList<>();
+    private int lyricIndex = 0;
 
-    /**
-     * Constructor for objects of class Lyrics
-     */
     public LyricAndAnswers()
     {
         lyrics.add(0, null);
@@ -128,6 +125,59 @@ public class LyricAndAnswers
         lyrics.add("If you're having girl problems I feel bad for you son" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "99 Problems - Jay-Z");
         lyrics.add("I done said a lotta things in my day, I admit it, this is payback in a way, I regret it that I did it" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Lucky You - Eminem");
         lyrics.add("And though time goes by I will always be in a club with you" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "1973 - James Blunt");
+        lyrics.add("And if you said this life ain't good enough I would give my world to lift you up" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Smooth - Santana");
+        lyrics.add("Would you dance if I asked you to dance? Or would you run and never look back?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hero - Enrique Iglesias");
+        lyrics.add("Annie, are you ok? So, Annie are you ok? Are you ok, Annie?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Smooth Criminal - Michael Jackson");
+        lyrics.add("'Cause there's nothing, there's nothing you can teach me that I can't learn from Mr. Hathaway" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Rehab - Amy Winehouse");
+        lyrics.add("Young man, I was once in your shoes. I said, I was down and out with the blues" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Y.M.C.A - Village People");
+        lyrics.add("Sprung from cages out on highway nine, chrome wheeled, fuel injected, and steppin' out over the line" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Born To Run - Bruce Springsteen");
+        lyrics.add("My loneliness is killing me (and I) I must confess I still believe (still believe)" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "... Baby One More Time - Britney Spears");
+        lyrics.add("He'd give up all his comfort, sleep out in the rain, if she said that's the way it ought to be" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "When A Man Loves A Woman - Percy Sledge");
+        lyrics.add("But, he can't be a man 'cause he doesn't smoke the same cigarettes as me" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "(I Can't Get No) Satisfaction - The Rolling Stones");
+        lyrics.add("Regrets, I've had a few, but then again, too few to mention. I did what I had to do, and saw it through without exemption" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "My Way - Frank Sinatra");
+        lyrics.add("Some people call me the space cowboy, yeah, some call me the gangster of love" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Joker - Steve Miller Band");
+        lyrics.add("Never made it as a wise man, I couldn't cut it as a poor man stealing" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "How You Remind Me - Nickelback");
+        lyrics.add("If I leave here tomorrow, would you still remember me?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Free Bird - Lynyrd Skynyrd");
+        lyrics.add("All I know, time is a valuable thing watch it fly by as the pendulum swings" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "In The End - Linkin Park");
+        lyrics.add("Streetlights, people, living just to find emotion. Hiding somewhere in the night" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Don't Stop Believing - Journey");
+        lyrics.add("You keep on dancin' and the room gets hot, you drive us wild, we'll drive you crazy" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Rock And Roll All Nite - Kiss");
+        lyrics.add("The phone rings in the middle of the night, my father yells what you gonna do with your life" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Girls Just Want To Have Fun - Cyndi Lauper");
+        lyrics.add("And as we wind on down the road, our shadows taller than our soul" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Stairway To Heaven - Led Zeppelin");
+        lyrics.add("People always told me be careful of what you do, and don't go around breaking young girls' hearts" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Billi Jean - Michael Jackson");
+        lyrics.add("Oh, take your time, don't live too fast, troubles will come and they will pass" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Simple Man - Lynyrd Skynyrd");
+        lyrics.add("And you can't fight the tears that ain't coming, or the moment of truth in your lies" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Iris - Goo Goo Dolls");
+        lyrics.add("In touch with the ground I'm on the hunt down I'm after you" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hungry Like The Wolf - Duran Duran");
+        lyrics.add("Into this house we're born, into this world we're thrown, like a dog without a bone, an actor out on loan" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Riders On The Storm - The Doors");
+        lyrics.add("It's close to midnight, something evil's lurking from the dark" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Thriller - Michael Jackson");
+        lyrics.add("Life is a mystery, everyone must stand alone. I hear you call my name, and it feels like home" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Like a Prayer - Madonna");
+        lyrics.add("How can you just leave me standing? Alone in a world that's so cold (so cold)" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "When Doves Cry - Prince");
+        lyrics.add("Clock strikes upon the hour and the sun begins to fade" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Wanna Dance With Somebody - Whitney Houston");
+        lyrics.add("I'm up on him, he up on me, don't pay him any attention" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Single Ladies (Put A Ring On It) - Beyoncé");
+        lyrics.add("Few times I've been around that track so it's not just gonna happen like that" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hollaback Girl - Gwen Stefani");
+        lyrics.add("Your stare was holding, ripped jeans, skin was showin'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Call Me Maybe - Carly Rae Jepsen");
+        lyrics.add("I'm too hot (hot damn), am I bad 'bout that money, break it down" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Uptown Funk - Mark Ronson");
+        lyrics.add("I'll never miss a beat, I'm lightning on my feet, and that's what they don't see" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Shake It Off - Taylor Swift");
+        lyrics.add("So I put my hands up, they're playing my song, and the butterflies fly away" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Party In The U.S.A - Miley Cyrus");
+        lyrics.add("I want a ticket to anywhere, maybe we make a deal. Maybe together we can get somewhere" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Fast Car - Tracy Chapman");
+        lyrics.add("Hangin' out the passenger side of his best friend's ride, trying to holla at me" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "No Scrubs - TLC");
+        lyrics.add("Anyway the thing is, what I really mean, yours are the sweetest eyes I've ever seen" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Your Song - Elton John");
+        lyrics.add("Oh man, wonder if he'll ever know he's in the best selling show" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Life On Mars? - David Bowie");
+        lyrics.add("You never close your eyes anymore when I kiss your lips and there's no tenderness like before in your fingertips" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "You've Lost That Loving Feeling - The Righteous Brothers");
+        lyrics.add("Ground Control to Major Tom, take your protein pills and put your helmet on" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Space Oddity - David Bowie");
+        lyrics.add("I-I love the colorful clothes she wears and the way the sunlight plays upon her hair" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Good Vibrations - The Beach Boys");
+        lyrics.add("I want your ugly, I want your disease, I want your everything as long as it's free" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bad Romance - Lady Gaga");
+        lyrics.add("When the sun shines, we shine together, told you I'll be here forever" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Umbrella - Rihanna");
+        lyrics.add("Yeah I was out of touch, but it wasn't because I didn't know enough, I just knew too much" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Crazy - Gnarls Barkley");
+        lyrics.add("I've been really tryin', baby, tryin' to hold back this feeling for so long" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let's Get It On - Marvin Gaye");
+        lyrics.add("Thunder only happens when it's raining, players only love you when they're playing" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Dreams - Fleetwood Mac");
+        lyrics.add("What have I become, my sweetest friend. Everyone I know goes away in the end" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hurt - Johnny Cash");
+        lyrics.add("Stopped into a church, I passed along the way. Well, I got down on my knees, and I pretend to pray" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "California Dreamin' - The Mamas And The Papas");
+        lyrics.add("What you want, baby, I got it, what you need, do you know I got it?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Respect - Aretha Franklin");
+        lyrics.add("I thought love was more or less a giving thing, the more I gave the less I got oh yeah" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I'm A Believer - The Monkees");
+        lyrics.add("It's a cool place and they say it gets colder, you're bundled up now, wait till you get older" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "All Star - Smash Mouth");
+        lyrics.add("You think you've got it, oh, you think you've got it. But got it just don't get it when there's nothin' at all" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hey Ya! - Outkast");
+        lyrics.add("Thirteen month old baby, broke the lookin' glass, seven years of bad luck, the good things in your past" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Superstition - Stevie Wonder");
+
     }
 
     public void randomLyrics()
@@ -142,6 +192,10 @@ public class LyricAndAnswers
     public ArrayList getLyricsList()
     {
         return lyrics;
+    }
+
+    public int getListSize() {
+        return lyrics.size();
     }
 
     public String getLyric(int index)
@@ -159,7 +213,7 @@ public class LyricAndAnswers
     {
         for(String lyric : lyrics)
         {
-            if(lyric == lyricName) {
+            if(Objects.equals(lyric, lyricName)) {
                 lyricIndex = lyrics.indexOf(lyric);
             }
         }

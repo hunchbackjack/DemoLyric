@@ -315,13 +315,13 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/amount_of_turns"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/turnSubmit"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/turnCount"
-        android:importantForAutofill="no"
         tools:ignore="UnusedAttribute" />
 
 </android.support.constraint.ConstraintLayout>

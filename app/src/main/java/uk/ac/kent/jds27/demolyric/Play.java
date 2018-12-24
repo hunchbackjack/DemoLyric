@@ -2,30 +2,24 @@ package uk.ac.kent.jds27.demolyric;
 
 import android.util.Log;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class Play
+class Play
 {
     private Game game;
 
-    /**
-     * Constructor for objects of class Play
-     */
     public Play() {
         game = new Game();
-        game.randomLyrics();
     }
 
     public String haveGo()
     {
         //String go = game.randomLyrics() + "\n" + "\n" + "\n" + game.getAnswer();
-        String go = game.randomLAA();
-        return go;
+        return game.randomLAA();
     }
 
     public void reset() {
         game = new Game();
-        game.randomLyrics();
     }
 
     public void addLaa(String laa) {
@@ -33,7 +27,11 @@ public class Play
         Log.d("Play", "String: " + laa);
     }
 
-    public void addList(ArrayList list) {
+    public void addList(ArrayList<String> list) {
         game.addList(list);
+    }
+
+    public int getListSize() {
+        return game.getListSize();
     }
 }

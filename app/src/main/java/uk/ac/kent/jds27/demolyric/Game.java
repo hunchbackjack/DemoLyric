@@ -5,44 +5,20 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Game
+@SuppressWarnings("unused")
+class Game
 {
-    private Lyrics lyric;
-    private Answers answer;
-    private LyricAndAnswers la;
-    private Random randomGenerator;
-    private String randomLyric;
+    private final LyricAndAnswers la;
+    private final Random randomGenerator;
     private String lyricString;
+    @SuppressWarnings("unused")
     private int lyricInt;
-    private String gameOver;
-    /**
-     * Constructor for objects of class Game
-     */
+
     public Game()
     {
-        lyric = new Lyrics();
-        answer = new Answers();
         la = new LyricAndAnswers();
-        randomLyric = null;
         randomGenerator = new Random();
         lyricInt = 0;
-        gameOver = "Game complete";
-    }
-
-    public String randomLyrics()
-    {
-        int index = randomGenerator.nextInt(lyric.getLyricsList().size());
-        if(index == 0) {
-            index++;
-            return lyricString;
-        }
-        else {
-            lyricString = lyric.getLyric(index);
-            lyricInt = lyric.getIndexByLyric(lyricString);
-            System.out.println(lyricString);
-            lyric.getLyricsList().remove(index);
-            return lyricString;
-        }
     }
 
     public String randomLAA()
@@ -66,21 +42,12 @@ public class Game
         Log.d("Game", "String: " + laa);
     }
 
-    public void addList(ArrayList list) {
+    public void addList(ArrayList<String> list) {
         la.addList(list);
     }
 
-    public String getAnswer()
-    {
-        if(answer.getAnswerArray().size() == 1) {
-            return gameOver;
-        }
-        else {
-            String answerString = answer.getAnswer(lyricInt);
-            System.out.println(answerString);
-            answer.getAnswerArray().remove(answerString);
-            return answerString;
-        }
+    public int getListSize() {
+        return la.getListSize();
     }
 
 }

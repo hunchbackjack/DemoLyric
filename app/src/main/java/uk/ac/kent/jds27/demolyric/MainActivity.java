@@ -1,61 +1,69 @@
 package uk.ac.kent.jds27.demolyric;
 
+import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Game game = new Game();
-    Play play = new Play();
-    TextView lyricString;
+    private final Play play = new Play();
+    private TextView lyricString;
     TextView turnCount;
     Button playButton;
     Button playAgainButton;
     Button helpButton;
     Button addButton;
+    Button changeCount;
+    Button turnSubmit;
     ConstraintLayout addSongConstraint;
+    ConstraintLayout howToConstraint;
     EditText addLyric;
     EditText addSong;
     EditText addArtist;
+    EditText editTurn;
     int count = 0;
-    ArrayList<String> addSongs = new ArrayList<String>();
+    int goCount = 20;
+    final ArrayList<String> addSongs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lyricString = (TextView) findViewById(R.id.lyricString);
-        turnCount = (TextView) findViewById(R.id.turnCount);
-        playButton = (Button) findViewById(R.id.playButton);
-        playAgainButton = (Button) findViewById(R.id.playAgainButton);
-        helpButton = (Button) findViewById(R.id.helpButton);
-        addButton = (Button) findViewById(R.id.addButton);
-        addSongConstraint = (ConstraintLayout) findViewById(R.id.addSongConstraint);
-        addLyric = (EditText) findViewById(R.id.addLyric);
-        addSong = (EditText) findViewById(R.id.addSong);
-        addArtist = (EditText) findViewById(R.id.addArtist);
+        lyricString = findViewById(R.id.lyricString);
+        turnCount = findViewById(R.id.turnCount);
+        playButton = findViewById(R.id.playButton);
+        playAgainButton = findViewById(R.id.playAgainButton);
+        helpButton = findViewById(R.id.helpButton);
+        addButton = findViewById(R.id.addButton);
+        addSongConstraint = findViewById(R.id.addSongConstraint);
+        addLyric = findViewById(R.id.addLyric);
+        addSong = findViewById(R.id.addSong);
+        addArtist = findViewById(R.id.addArtist);
+        changeCount = findViewById(R.id.changeCount);
+        editTurn = findViewById(R.id.editTurn);
+        turnSubmit = findViewById(R.id.turnSubmit);
+        howToConstraint = findViewById(R.id.howToConstraint);
     }
 
     public void haveGo(View view) {
         count++;
-        turnCount.setText(count + "/20");
+        turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
         helpButton.setVisibility(View.INVISIBLE);
-        if(count >= 20) {
-            lyricString.setText("Game Complete!");
+        if(count >= goCount) {
+            lyricString.setText(getString(R.string.game_complete));
             playButton.setVisibility(View.INVISIBLE);
             playAgainButton.setVisibility(View.VISIBLE);
         }
         else {
-            playButton.setText("Next");
-            String lyric = game.randomLyrics();
-            String answer = game.getAnswer();
+            playButton.setText(getString(R.string.next));
             String turn = play.haveGo();
             lyricString.setText(turn);
         }
@@ -100,5 +108,41 @@ public class MainActivity extends AppCompatActivity {
             Toast errorToast = Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_LONG);
             errorToast.show();
         }
+    }
+
+    public void changeTurnCount(View view) {
+        editTurn.setVisibility(View.VISIBLE);
+        turnSubmit.setVisibility(View.VISIBLE);
+    }
+
+    public void submitTurnCount(View view) {
+        String value = editTurn.getText().toString();
+        Log.d("MainActivity", "Value: " + value);
+
+        try{
+            int turn = Integer.parseInt(value);
+            Log.d("MainActivity", "turn: " + turn);
+            if(turn > play.getListSize()) {
+                Toast sizeToast = Toast.makeText(this, "Please input a number lower than " + play.getListSize(), Toast.LENGTH_LONG);
+                sizeToast.show();
+            }
+            else {
+                goCount = turn;
+            }
+        }catch (NumberFormatException ex) {
+            Toast toast = Toast.makeText(this, "Please input a number", Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+        editTurn.setVisibility(View.INVISIBLE);
+        turnSubmit.setVisibility(View.INVISIBLE);
+    }
+
+    public void showHowTo (View view) {
+        howToConstraint.setVisibility(View.VISIBLE);
+    }
+
+    public void closeHowTo(View view) {
+        howToConstraint.setVisibility(View.INVISIBLE);
     }
 }
