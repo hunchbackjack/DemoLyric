@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Name That Song</string>
+    <string name="play">Play</string>
+    <string name="play_again">Play again?</string>
+    <string name="plus">+</string>
+    <string name="add_song">Add Song</string>
+    <string name="lyric">Lyric</string>
+    <string name="song_title">Song Title</string>
+    <string name="artist">Artist</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="game_complete">Game Complete!</string>
+    <string name="next">Next</string>
+    <string name="new_turn_count">New turn count</string>
+    <string name="submit">Submit</string>
 </resources>
