@@ -4,14 +4,13 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.Random;
 
 class LyricAndAnswers
 {
     private final ArrayList<String> lyrics = new ArrayList<>();
     private int lyricIndex = 0;
 
-    public LyricAndAnswers()
+    LyricAndAnswers()
     {
         lyrics.add(0, null);
         lyrics.add("that's me in the corner, that's me in the spotlight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Losing My Religion - R.E.M");
@@ -180,25 +179,16 @@ class LyricAndAnswers
 
     }
 
-    public void randomLyrics()
-    {
-        if(lyrics.size() > 0) {
-            Random rand = new Random();
-            int index = rand.nextInt(lyrics.size());
-            System.out.println(lyrics.get(rand.nextInt(lyrics.size())));
-        }
-    }
-
-    public ArrayList getLyricsList()
+    ArrayList getLyricsList()
     {
         return lyrics;
     }
 
-    public int getListSize() {
+    int getListSize() {
         return lyrics.size();
     }
 
-    public String getLyric(int index)
+    String getLyric(int index)
     {
         String randomLyric = null;
         for(String lyric : lyrics) {
@@ -209,7 +199,7 @@ class LyricAndAnswers
         return randomLyric;
     }
 
-    public int getIndexByLyric(String lyricName)
+    int getIndexByLyric(String lyricName)
     {
         for(String lyric : lyrics)
         {
@@ -220,12 +210,12 @@ class LyricAndAnswers
         return lyricIndex;
     }
 
-    public void addLaa(String laa) {
+    void addLaa(String laa) {
         lyrics.add(laa);
         Log.d("LyricAndAnswers", "String: " + laa);
     }
 
-    public void addList(ArrayList<String> list) {
+    void addList(ArrayList<String> list) {
         lyrics.addAll(list);
     }
 }

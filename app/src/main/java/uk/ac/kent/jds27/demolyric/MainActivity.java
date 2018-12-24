@@ -16,22 +16,20 @@ public class MainActivity extends AppCompatActivity {
 
     private final Play play = new Play();
     private TextView lyricString;
-    TextView turnCount;
-    Button playButton;
-    Button playAgainButton;
-    Button helpButton;
-    Button addButton;
-    Button changeCount;
-    Button turnSubmit;
-    ConstraintLayout addSongConstraint;
-    ConstraintLayout howToConstraint;
-    EditText addLyric;
-    EditText addSong;
-    EditText addArtist;
-    EditText editTurn;
-    int count = 0;
-    int goCount = 20;
-    final ArrayList<String> addSongs = new ArrayList<>();
+    private TextView turnCount;
+    private Button playButton;
+    private Button playAgainButton;
+    private Button helpButton;
+    private Button turnSubmit;
+    private ConstraintLayout addSongConstraint;
+    private ConstraintLayout howToConstraint;
+    private EditText addLyric;
+    private EditText addSong;
+    private EditText addArtist;
+    private EditText editTurn;
+    private int count = 0;
+    private int goCount = 20;
+    private final ArrayList<String> addSongs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +40,17 @@ public class MainActivity extends AppCompatActivity {
         playButton = findViewById(R.id.playButton);
         playAgainButton = findViewById(R.id.playAgainButton);
         helpButton = findViewById(R.id.helpButton);
-        addButton = findViewById(R.id.addButton);
         addSongConstraint = findViewById(R.id.addSongConstraint);
         addLyric = findViewById(R.id.addLyric);
         addSong = findViewById(R.id.addSong);
         addArtist = findViewById(R.id.addArtist);
-        changeCount = findViewById(R.id.changeCount);
         editTurn = findViewById(R.id.editTurn);
         turnSubmit = findViewById(R.id.turnSubmit);
         howToConstraint = findViewById(R.id.howToConstraint);
     }
 
-    public void haveGo(View view) {
+    @SuppressWarnings("WeakerAccess")
+    public void haveGo(@SuppressWarnings("unused") View view) {
         count++;
         turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
         helpButton.setVisibility(View.INVISIBLE);

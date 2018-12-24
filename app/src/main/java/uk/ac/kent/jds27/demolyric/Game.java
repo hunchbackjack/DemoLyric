@@ -14,14 +14,15 @@ class Game
     @SuppressWarnings("unused")
     private int lyricInt;
 
-    public Game()
+    Game()
     {
         la = new LyricAndAnswers();
         randomGenerator = new Random();
         lyricInt = 0;
     }
 
-    public String randomLAA()
+    @SuppressWarnings("UnusedAssignment")
+    String randomLAA()
     {
         int index = randomGenerator.nextInt(la.getLyricsList().size());
         if(index == 0) {
@@ -37,16 +38,16 @@ class Game
         }
     }
 
-    public void addLaa(String laa) {
+    void addLaa(String laa) {
         la.addLaa(laa);
         Log.d("Game", "String: " + laa);
     }
 
-    public void addList(ArrayList<String> list) {
+    void addList(ArrayList<String> list) {
         la.addList(list);
     }
 
-    public int getListSize() {
+    int getListSize() {
         return la.getListSize();
     }
 
