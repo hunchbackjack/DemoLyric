@@ -13,4 +13,9 @@
     <string name="next">Next</string>
     <string name="new_turn_count">New turn count</string>
     <string name="submit">Submit</string>
+    <string name="x">x</string>
+    <string name="turnChange">To change the number of turns press Playand then click on the turn counter in the bottom left hand corner.</string>
+    <string name="addSong">To add your own lyrics, press the +button in the top left had corner. Note that this will only add the song for the current game.</string>
+    <string name="how_to">How To</string>
+    <string name="amount_of_turns">Amount of turns</string>
 </resources>
