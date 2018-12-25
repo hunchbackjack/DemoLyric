@@ -184,18 +184,6 @@ class LyricAndAnswers
         lyrics.add("When the snowman brings the snow, well he just might like to know, he's put a great big smile on somebody's face" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Wish It Could Be Christmas Everyday - Wizzard");
         lyrics.add("It was December 24th on Hollis ave in the dark when I see a man chilling with his dog in the park" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Christmas In Hollies - Run-D.M.C");
         lyrics.add("See-saw swingin' with the boys in the schoo with your feet flyin' up in the air" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Walk This Way - Aerosmith");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
-
-
     }
 
     ArrayList getLyricsList()
