@@ -8,7 +8,7 @@ import java.util.Random;
 @SuppressWarnings("unused")
 class Game
 {
-    private final LyricAndAnswers la;
+    final LyricAndAnswers la;
     private final Random randomGenerator;
     private String lyricString;
     @SuppressWarnings("unused")

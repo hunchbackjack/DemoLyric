@@ -191,6 +191,11 @@ class LyricAndAnswers
         return lyrics;
     }
 
+    String getLyricsElement(int i)
+    {
+        return lyrics.get(i);
+    }
+
     int getListSize() {
         return lyrics.size();
     }

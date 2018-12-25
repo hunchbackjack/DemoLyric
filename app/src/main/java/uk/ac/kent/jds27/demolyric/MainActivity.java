@@ -15,7 +15,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private final Play play = new Play();
+    public static final LyricAndAnswers la = new LyricAndAnswers();
     private Button playButton;
+    private Button songButton;
     private ConstraintLayout addSongConstraint;
     private ConstraintLayout howToConstraint;
     private EditText addLyric;
@@ -33,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
         addSong = findViewById(R.id.addSong);
         addArtist = findViewById(R.id.addArtist);
         howToConstraint = findViewById(R.id.howToConstraint);
+        songButton = findViewById(R.id.songButton);
 
         configurePlayButton();
+        configureSongsButton();
     }
 
     private void configurePlayButton() {
@@ -42,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, GameScreen.class));
+            }
+        });
+    }
+
+    private void configureSongsButton() {
+        songButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SongActivity.class));
             }
         });
     }
