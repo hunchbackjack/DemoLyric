@@ -176,6 +176,25 @@ class LyricAndAnswers
         lyrics.add("It's a cool place and they say it gets colder, you're bundled up now, wait till you get older" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "All Star - Smash Mouth");
         lyrics.add("You think you've got it, oh, you think you've got it. But got it just don't get it when there's nothin' at all" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hey Ya! - Outkast");
         lyrics.add("Thirteen month old baby, broke the lookin' glass, seven years of bad luck, the good things in your past" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Superstition - Stevie Wonder");
+        lyrics.add("Got on a lucky one, came in eighteen to one. I've got a feeling this year's for me and you" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Fairytale Of New York - The Pogues");
+        lyrics.add("I won't ask for much this Christmas, I won't even wish for snow. I'm just gonna keep on waiting underneath the mistletoe" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "All I Want For Christmas Is You - Mariah Carey");
+        lyrics.add("Are you hanging up your stocking on your wall, it's the time when every Santa has a ball" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Merry Xmas Everybody - Slade");
+        lyrics.add("Once bitten and twice shy, I keep my distance but you still catch my eye" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Last Christmas - Wham!");
+        lyrics.add("At Christmas time, it's hard but while you're having fun, there's a world outside your window, and it's a world of dread and fear" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Do They Know It's Christmas? - Band Aid");
+        lyrics.add("When the snowman brings the snow, well he just might like to know, he's put a great big smile on somebody's face" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Wish It Could Be Christmas Everyday - Wizzard");
+        lyrics.add("It was December 24th on Hollis ave in the dark when I see a man chilling with his dog in the park" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Christmas In Hollies - Run-D.M.C");
+        lyrics.add("See-saw swingin' with the boys in the schoo with your feet flyin' up in the air" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Walk This Way - Aerosmith");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+        lyrics.add("" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "");
+
 
     }
 
