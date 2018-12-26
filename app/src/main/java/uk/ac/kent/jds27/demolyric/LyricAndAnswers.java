@@ -8,7 +8,6 @@ class LyricAndAnswers {
     private int lyricIndex = 0;
 
     LyricAndAnswers() {
-        lyrics.add(0, null);
         lyrics.add("That's me in the corner, that's me in the spotlight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Losing My Religion - R.E.M");
         lyrics.add("I said to the man 'are you trying to tempt me?'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Down Under - Men At Work");
         lyrics.add("Marry him, or marry me, I'm the one that loves you baby can't you see" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Two Princes - Spin Doctors");
