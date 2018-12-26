@@ -39,7 +39,6 @@ class LyricAndAnswers
         lyrics.add("We'll be together, with a roof right over our heads" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Is This Love - Bob Marley");
         lyrics.add("'Cause I knew it from the start, baby when you broke my heart" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Return Of The Mack - Mark Morrison");
         lyrics.add("Hell, with it baby cause you're fun and you're mine and you look so divine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Come And Get Your Love - Redbone");
-        lyrics.add("And our bodies, are tired. Our shadows will dance. I've been achin' achin' for you, my love" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "My Head Is A Jungle - Emma Louise, Wankelmut");
         lyrics.add("Man, we just fell about the place, if that chick don't want to know, forget her" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "The Boys Are Back In Town - Thin Lizzy");
         lyrics.add("Drink some Margaritas by a string of blue lights, listen to the Mariachi play at midnight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Are You With Me - Lost Frequencies");
         lyrics.add("When head of state didn't play guitar, not everybody drove a car" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Wish I Was A Punk Rocker (With Flowers In My Hair) - Sandi Thom");
@@ -183,7 +182,47 @@ class LyricAndAnswers
         lyrics.add("At Christmas time, it's hard but while you're having fun, there's a world outside your window, and it's a world of dread and fear" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Do They Know It's Christmas? - Band Aid");
         lyrics.add("When the snowman brings the snow, well he just might like to know, he's put a great big smile on somebody's face" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Wish It Could Be Christmas Everyday - Wizzard");
         lyrics.add("It was December 24th on Hollis ave in the dark when I see a man chilling with his dog in the park" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Christmas In Hollies - Run-D.M.C");
-        lyrics.add("See-saw swingin' with the boys in the schoo with your feet flyin' up in the air" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Walk This Way - Aerosmith");
+        lyrics.add("See-saw swingin' with the boys in the school with your feet flyin' up in the air" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Walk This Way - Aerosmith");
+        lyrics.add("My life is brilliant, my love is pure. I saw an angel, of that I'm sure" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "You're Beautiful - James Blunt");
+        lyrics.add("People killin', people dyin', children hurt can you hear them cryin'?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Where Is The Love - Black Eyed Peas");
+        lyrics.add("Slamming Bentley doors, hopping out of Porsche's, popping up on Forbes lists, gorgeous, hold up" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Young Forever - Jay-Z");
+        lyrics.add("Let's dance in style, let's dance for a while, heaven can wait we're only watching the skies" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Forever Young - Alphaville");
+        lyrics.add("Well open up your mind and see like me, open up your plans and damn you're free" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I'm Yours - Jason Mraz");
+        lyrics.add("So lately, been wondering, who will be there to take my place, when I'm gone you'll need love to light the shadows on your face" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Wherever You Will Go - The Calling");
+        lyrics.add("An enchanted moment and it sees me through, it's enough for this restless warrior just to be with you" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Can You Feel The Love Tonight - Elton John");
+        lyrics.add("Nobody wanta' see us together, nobody thought that we'd last forever, I feel them hoping and praying" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Don't Matter - Akon");
+        lyrics.add("Promise I'll be kind, but I won't stop until that boy is mine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Paparazzi - Lady Gaga");
+        lyrics.add("See the stone set in your eyes, see the thorn twist in your side" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "With Or Without You - U2");
+        lyrics.add("I drove for miles and miles and wound up at your door. I've had you so many times but somehow I want more" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "She Will Be Loved - Maroon 5");
+        lyrics.add("And in my hour of darkness she is standing right in front of me, speaking words of wisdom," + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let It Be - The Beatles");
+        lyrics.add("Well, don't get lonely now, and dry your whining eyes. I'm just roaming for the moment" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "When I Come Around - Green Day");
+        lyrics.add("Everybody's looking for love, oh, oh, ain't that the reason you're at this club" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "In My Head - Jason Derulo");
+        lyrics.add("Chill out, what you yelling for? Lay back, it's all been done before" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Complicated - Avril Lavigne");
+        lyrics.add("I can only tell you what it feels like, and right now there's a steel knife, in my windpipe" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Love The Way You Lie - Eminem");
+        lyrics.add("Tomorrow's getting harder, make no mistake, luck ain't enough you've got to make your own breaks" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "It's My Life - Bon Jovi");
+        lyrics.add("You can brush my hair, undress me everywhere. Imagination, life is your creation" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Barbie Girl - Aqua");
+        lyrics.add("Control yourself, take only what you need from it. A family of trees wanting to be haunted" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Kids - MGMT");
+        lyrics.add("Exit, light, enter, night. Take my hand, we're off to never-never land" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Enter Sandman - Metallica");
+        lyrics.add("I was too weak to give in, too strong to lose. My heart is under arrest again, but I break loose" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Best Of You - Foo Fighters");
+        lyrics.add("And I can't stop till the whole word knows my name 'cause I was only born inside my dreams" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Centuries - Fall Out Boy");
+        lyrics.add("I’m just a notch in your bedpost, but you're just a line in a song" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Sugar, We're Going Down - Fall Out Boy");
+        lyrics.add("Welcome to a new kind of tension, all across the alien nation" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "American Idiot - Green Day");
+        lyrics.add("Wake me up inside, call my name and save me from the dark" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bring Me To Life - Evanescence");
+        lyrics.add("Yes, I'm let loose from the noose that's kept me hanging about" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Back In Black - AC/DC");
+        lyrics.add("By becoming this all I want to do is be more like me and be less like you" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Numb - Linkin Park");
+        lyrics.add("Buddy, you're a young man, hard man, shouting in the street, gonna take on the world someday" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "We Will Rock You - Queen");
+        lyrics.add("I go crazy 'cause here isn't where I wanna be and satisfaction feels like a distant memory" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "R U Mine? - Arctic Monkeys");
+        lyrics.add("Tell me how's it feel sittin' up there, feeling so high but too far away to hold me" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Without Me - Halsey");
+        lyrics.add("I should've stayed with you last night, instead of going out to find trouble" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let You Love Me - Rita Ora");
+        lyrics.add("Give me one good reason why I should never make a change" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Budapest - George Ezra");
+        lyrics.add("Oh we go where nobody knows, with guns hidden under our petticoats" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Chocolate - The 1975");
+        lyrics.add("There's a hole in your logic, you who know all the answers" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Goodbye Mr. A - The Hoosiers");
+        lyrics.add("But you won't get a crumb from me 'cause I'm from the streets of Compton" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Forgot About Dre - Dr. Dre");
+        lyrics.add("They will not force us, they will stop degrading us, they will not control us, we will be victorious " + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Uprising - Muse");
+        lyrics.add("Thoughts arrive like butterflies oh he don't know, so he chases them away" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Even Flow - Pearl Jam");
+        lyrics.add("Say it ain't so, I will not go, turn the lights off, carry me home" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "All The Small Things - Blink-182");
+        lyrics.add("The unsuspecting victim of darkness in the valley, we can live like Jack and Sally if we want" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Miss You - Blink-182");
+
     }
 
     ArrayList getLyricsList()

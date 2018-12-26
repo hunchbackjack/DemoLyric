@@ -22,7 +22,6 @@ public class GameScreen extends AppCompatActivity {
     private TextView turnCount;
     private Button nextButton;
     private Button playAgainButton;
-
     private TextView timer;
     private Button turnSubmit;
     private Button timeSubmit;
@@ -56,7 +55,6 @@ public class GameScreen extends AppCompatActivity {
         cTimer = null;
         timeSubmit = findViewById(R.id.timeSubmit);
         editTime = findViewById(R.id.editTime);
-
         haveGo(nextButton);
     }
 
@@ -64,9 +62,11 @@ public class GameScreen extends AppCompatActivity {
     @SuppressWarnings("WeakerAccess")
     public void haveGo(@SuppressWarnings("unused") View view) {
         count++;
-        turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
+        if(count <= goCount) {
+            turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
+        }
         if(cTimer != null) { cTimer.cancel(); }
-        if(count >= goCount) {
+        if(count > goCount) {
             lyricString.setText(getString(R.string.game_complete));
             nextButton.setVisibility(View.INVISIBLE);
             playAgainButton.setVisibility(View.VISIBLE);
