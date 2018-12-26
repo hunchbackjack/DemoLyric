@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class GameScreen extends AppCompatActivity {
 
     private final Play play = new Play();
-
+    private final ArrayList<String> addSongs = new ArrayList<>();
     private TextView lyricString;
     private TextView turnCount;
     private Button nextButton;
@@ -35,7 +35,7 @@ public class GameScreen extends AppCompatActivity {
     private int count = 0;
     private int goCount = 20;
     private int timeCount = 11000;
-    private final ArrayList<String> addSongs = new ArrayList<>();
+    private int listSize = play.getListSize();
     private CountDownTimer cTimer;
 
     @Override
@@ -62,16 +62,17 @@ public class GameScreen extends AppCompatActivity {
     @SuppressWarnings("WeakerAccess")
     public void haveGo(@SuppressWarnings("unused") View view) {
         count++;
-        if(count <= goCount) {
+        if (count <= goCount) {
             turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
         }
-        if(cTimer != null) { cTimer.cancel(); }
-        if(count > goCount) {
+        if (cTimer != null) {
+            cTimer.cancel();
+        }
+        if (count > goCount) {
             lyricString.setText(getString(R.string.game_complete));
             nextButton.setVisibility(View.INVISIBLE);
             playAgainButton.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
             String turn = play.haveGo();
             lyricString.setText(turn);
             cTimer = new CountDownTimer(timeCount, 1000) {
@@ -97,18 +98,18 @@ public class GameScreen extends AppCompatActivity {
         playAgainButton.setVisibility(View.INVISIBLE);
     }
 
-    public void changeTurnCount(View view) {
-        editTurn.setVisibility(View.VISIBLE);
-        turnSubmit.setVisibility(View.VISIBLE);
+    public void changeTimeCount(View view) {
+        editTime.setVisibility(View.VISIBLE);
+        timeSubmit.setVisibility(View.VISIBLE);
     }
 
     public void submitTimeCount(View view) {
         String value = editTime.getText().toString();
 
-        try{
+        try {
             int time = Integer.parseInt(value);
             timeCount = time * 1000;
-        }catch (NumberFormatException ex) {
+        } catch (NumberFormatException ex) {
             Toast toast = Toast.makeText(this, "Please input a number", Toast.LENGTH_LONG);
             toast.show();
         }
@@ -117,23 +118,22 @@ public class GameScreen extends AppCompatActivity {
         timeSubmit.setVisibility(View.INVISIBLE);
     }
 
-    public void changeTimeCount(View view) {
-        editTime.setVisibility(View.VISIBLE);
-        timeSubmit.setVisibility(View.VISIBLE);
+    public void changeTurnCount(View view) {
+        editTurn.setVisibility(View.VISIBLE);
+        turnSubmit.setVisibility(View.VISIBLE);
     }
 
     public void submitTurnCount(View view) {
         String value = editTurn.getText().toString();
-        try{
+        try {
             int turn = Integer.parseInt(value);
-            if(turn > play.getListSize()) {
-                Toast sizeToast = Toast.makeText(this, "Please input a number lower than " + play.getListSize(), Toast.LENGTH_LONG);
+            if (turn > listSize) {
+                Toast sizeToast = Toast.makeText(this, "Please input " + listSize + " or lower.", Toast.LENGTH_LONG);
                 sizeToast.show();
-            }
-            else {
+            } else {
                 goCount = turn;
             }
-        }catch (NumberFormatException ex) {
+        } catch (NumberFormatException ex) {
             Toast toast = Toast.makeText(this, "Please input a number", Toast.LENGTH_LONG);
             toast.show();
         }
@@ -157,10 +157,11 @@ public class GameScreen extends AppCompatActivity {
         String lyricString = addLyric.getText().toString();
         String songString = addSong.getText().toString();
         String artistString = addArtist.getText().toString();
-        if(lyricString.length() > 0 && songString.length() > 0  && artistString.length() > 0 ) {
+        if (lyricString.length() > 0 && songString.length() > 0 && artistString.length() > 0) {
             String addString = (lyricString + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + songString + " - " + artistString);
             play.addLaa(addString);
             addSongs.add(addString);
+            listSize++;
             String newSong = (addString.replaceFirst(System.lineSeparator(), ""));
             String newSong1 = (newSong.replaceFirst(System.lineSeparator(), ""));
             Toast toast = Toast.makeText(getApplicationContext(), newSong1, Toast.LENGTH_SHORT);
@@ -174,8 +175,7 @@ public class GameScreen extends AppCompatActivity {
             addLyric.setText("");
             addSong.setText("");
             addArtist.setText("");
-        }
-        else {
+        } else {
             Toast errorToast = Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_LONG);
             errorToast.show();
         }

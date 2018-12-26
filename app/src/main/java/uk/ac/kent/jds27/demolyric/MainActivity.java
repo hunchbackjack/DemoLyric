@@ -17,8 +17,9 @@ import java.util.ArrayList;
 @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
 public class MainActivity extends AppCompatActivity {
 
-    private final Play play = new Play();
     public static final LyricAndAnswers la = new LyricAndAnswers();
+    private final Play play = new Play();
+    private final ArrayList<String> addSongs = new ArrayList<>();
     private Button playButton;
     private Button songButton;
     private ConstraintLayout addSongConstraint;
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText addLyric;
     private EditText addSong;
     private EditText addArtist;
-    private final ArrayList<String> addSongs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         String lyricString = addLyric.getText().toString();
         String songString = addSong.getText().toString();
         String artistString = addArtist.getText().toString();
-        if(lyricString.length() > 0 && songString.length() > 0  && artistString.length() > 0 ) {
+        if (lyricString.length() > 0 && songString.length() > 0 && artistString.length() > 0) {
             String addString = (lyricString + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + songString + " - " + artistString);
             play.addLaa(addString);
             addSongs.add(addString);
@@ -94,19 +94,22 @@ public class MainActivity extends AppCompatActivity {
             addLyric.setText("");
             addSong.setText("");
             addArtist.setText("");
-        }
-        else {
+        } else {
             Toast errorToast = Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_LONG);
             errorToast.show();
         }
     }
 
-    public void showHowTo (View view) {
+    public void showHowTo(View view) {
         howToConstraint.setVisibility(View.VISIBLE);
     }
 
     public void closeHowTo(View view) {
         howToConstraint.setVisibility(View.INVISIBLE);
+    }
+
+    public Play getPlay() {
+        return play;
     }
 
 }

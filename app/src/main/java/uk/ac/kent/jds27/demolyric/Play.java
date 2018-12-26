@@ -4,16 +4,14 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-class Play
-{
+class Play {
     private Game game;
 
     Play() {
         game = new Game();
     }
 
-    String haveGo()
-    {
+    String haveGo() {
         return game.randomLAA();
     }
 

@@ -3,13 +3,11 @@ package uk.ac.kent.jds27.demolyric;
 import java.util.ArrayList;
 import java.util.Objects;
 
-class LyricAndAnswers
-{
+class LyricAndAnswers {
     private final ArrayList<String> lyrics = new ArrayList<>();
     private int lyricIndex = 0;
 
-    LyricAndAnswers()
-    {
+    LyricAndAnswers() {
         lyrics.add(0, null);
         lyrics.add("That's me in the corner, that's me in the spotlight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Losing My Religion - R.E.M");
         lyrics.add("I said to the man 'are you trying to tempt me?'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Down Under - Men At Work");
@@ -93,7 +91,7 @@ class LyricAndAnswers
         lyrics.add("I've seen your flag on the marble arch, and love is not a victory march" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hallelujah - Jeff Buckley");
         lyrics.add("Life is old there, older than the trees, younger than the mountains, blowing like a breeze" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Take Me Home, Country Roads - John Denver");
         lyrics.add("He said, 'we haven't had that spirit here since nineteen sixty-nine'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hotel California - The Eagles");
-        lyrics.add("Trying to make ends meet, you're a slave to the money and then you die"  + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bittersweet Symphony - The Verve");
+        lyrics.add("Trying to make ends meet, you're a slave to the money and then you die" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bittersweet Symphony - The Verve");
         lyrics.add("I'm just a poor boy, I need no sympathy, because I'm easy come, easy go, little high, little low" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bohemian Rhapsody - Queen");
         lyrics.add("You may say I'm a dreamer, but I'm not the only one" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Imagine - John Lennon");
         lyrics.add("And down the waterfall wherever it may take me I know that life won't break me" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Angels - Robbie Williams");
@@ -223,13 +221,11 @@ class LyricAndAnswers
 
     }
 
-    ArrayList getLyricsList()
-    {
+    ArrayList getLyricsList() {
         return lyrics;
     }
 
-    String getLyricsElement(int i)
-    {
+    String getLyricsElement(int i) {
         return lyrics.get(i);
     }
 
@@ -237,22 +233,19 @@ class LyricAndAnswers
         return lyrics.size();
     }
 
-    String getLyric(int index)
-    {
+    String getLyric(int index) {
         String randomLyric = null;
-        for(String lyric : lyrics) {
-            if(index == lyrics.indexOf(lyric)) {
+        for (String lyric : lyrics) {
+            if (index == lyrics.indexOf(lyric)) {
                 randomLyric = lyric;
             }
         }
         return randomLyric;
     }
 
-    int getIndexByLyric(String lyricName)
-    {
-        for(String lyric : lyrics)
-        {
-            if(Objects.equals(lyric, lyricName)) {
+    int getIndexByLyric(String lyricName) {
+        for (String lyric : lyrics) {
+            if (Objects.equals(lyric, lyricName)) {
                 lyricIndex = lyrics.indexOf(lyric);
             }
         }

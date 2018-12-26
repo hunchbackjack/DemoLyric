@@ -6,30 +6,26 @@ import java.util.ArrayList;
 import java.util.Random;
 
 @SuppressWarnings("unused")
-class Game
-{
+class Game {
     final LyricAndAnswers la;
     private final Random randomGenerator;
     private String lyricString;
     @SuppressWarnings("unused")
     private int lyricInt;
 
-    Game()
-    {
+    Game() {
         la = new LyricAndAnswers();
         randomGenerator = new Random();
         lyricInt = 0;
     }
 
     @SuppressWarnings("UnusedAssignment")
-    String randomLAA()
-    {
+    String randomLAA() {
         int index = randomGenerator.nextInt(la.getLyricsList().size());
-        if(index == 0) {
+        if (index == 0) {
             index++;
             return lyricString;
-        }
-        else {
+        } else {
             lyricString = la.getLyric(index);
             lyricInt = la.getIndexByLyric(lyricString);
             System.out.println(lyricString);

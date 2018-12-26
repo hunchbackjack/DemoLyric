@@ -1,7 +1,7 @@
 package uk.ac.kent.jds27.demolyric;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,7 +21,7 @@ public class SongActivity extends AppCompatActivity {
     private void getSongs() {
         for (int i = 0; i < la.getListSize(); i++) {
             String song = la.getLyricsElement(i);
-            if(song != null) {
+            if (song != null) {
                 String newSong = (song.replaceFirst(System.lineSeparator(), ""));
                 String newSong1 = (System.lineSeparator() + (newSong.replaceFirst(System.lineSeparator(), "")));
                 TextView textView = new TextView(this);
