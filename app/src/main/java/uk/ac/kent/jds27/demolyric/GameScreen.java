@@ -58,9 +58,7 @@ public class GameScreen extends AppCompatActivity {
         haveGo(nextButton);
     }
 
-
-    @SuppressWarnings("WeakerAccess")
-    public void haveGo(@SuppressWarnings("unused") View view) {
+    private void haveGo(@SuppressWarnings("unused") View view) {
         count++;
         if(count <= goCount) {
             turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
