@@ -1,7 +1,5 @@
 package uk.ac.kent.jds27.demolyric;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -194,7 +192,7 @@ class LyricAndAnswers
         lyrics.add("Promise I'll be kind, but I won't stop until that boy is mine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Paparazzi - Lady Gaga");
         lyrics.add("See the stone set in your eyes, see the thorn twist in your side" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "With Or Without You - U2");
         lyrics.add("I drove for miles and miles and wound up at your door. I've had you so many times but somehow I want more" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "She Will Be Loved - Maroon 5");
-        lyrics.add("And in my hour of darkness she is standing right in front of me, speaking words of wisdom," + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let It Be - The Beatles");
+        lyrics.add("And in my hour of darkness she is standing right in front of me, speaking words of wisdom" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let It Be - The Beatles");
         lyrics.add("Well, don't get lonely now, and dry your whining eyes. I'm just roaming for the moment" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "When I Come Around - Green Day");
         lyrics.add("Everybody's looking for love, oh, oh, ain't that the reason you're at this club" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "In My Head - Jason Derulo");
         lyrics.add("Chill out, what you yelling for? Lay back, it's all been done before" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Complicated - Avril Lavigne");
@@ -263,7 +261,6 @@ class LyricAndAnswers
 
     void addLaa(String laa) {
         lyrics.add(laa);
-        Log.d("LyricAndAnswers", "String: " + laa);
     }
 
     void addList(ArrayList<String> list) {

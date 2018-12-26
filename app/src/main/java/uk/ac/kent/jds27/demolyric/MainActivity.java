@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -78,7 +81,14 @@ public class MainActivity extends AppCompatActivity {
             String addString = (lyricString + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + songString + " - " + artistString);
             play.addLaa(addString);
             addSongs.add(addString);
-            Toast toast = Toast.makeText(getApplicationContext(), addString, Toast.LENGTH_SHORT);
+            String newSong = (addString.replaceFirst(System.lineSeparator(), ""));
+            String newSong1 = (newSong.replaceFirst(System.lineSeparator(), ""));
+            Toast toast = Toast.makeText(getApplicationContext(), newSong1, Toast.LENGTH_SHORT);
+            LinearLayout layout = (LinearLayout) toast.getView();
+            if (layout.getChildCount() > 0) {
+                TextView tv = (TextView) layout.getChildAt(0);
+                tv.setGravity(Gravity.CENTER_HORIZONTAL);
+            }
             toast.show();
             addSongConstraint.setVisibility(View.INVISIBLE);
             addLyric.setText("");

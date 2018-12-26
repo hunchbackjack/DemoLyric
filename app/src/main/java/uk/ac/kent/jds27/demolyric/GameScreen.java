@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,7 +59,8 @@ public class GameScreen extends AppCompatActivity {
         haveGo(nextButton);
     }
 
-    private void haveGo(@SuppressWarnings("unused") View view) {
+    @SuppressWarnings("WeakerAccess")
+    public void haveGo(@SuppressWarnings("unused") View view) {
         count++;
         if(count <= goCount) {
             turnCount.setText(new StringBuilder().append(count).append("/").append(goCount));
@@ -122,11 +124,8 @@ public class GameScreen extends AppCompatActivity {
 
     public void submitTurnCount(View view) {
         String value = editTurn.getText().toString();
-        Log.d("MainActivity", "Value: " + value);
-
         try{
             int turn = Integer.parseInt(value);
-            Log.d("MainActivity", "turn: " + turn);
             if(turn > play.getListSize()) {
                 Toast sizeToast = Toast.makeText(this, "Please input a number lower than " + play.getListSize(), Toast.LENGTH_LONG);
                 sizeToast.show();
@@ -162,7 +161,14 @@ public class GameScreen extends AppCompatActivity {
             String addString = (lyricString + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + songString + " - " + artistString);
             play.addLaa(addString);
             addSongs.add(addString);
-            Toast toast = Toast.makeText(getApplicationContext(), addString, Toast.LENGTH_SHORT);
+            String newSong = (addString.replaceFirst(System.lineSeparator(), ""));
+            String newSong1 = (newSong.replaceFirst(System.lineSeparator(), ""));
+            Toast toast = Toast.makeText(getApplicationContext(), newSong1, Toast.LENGTH_SHORT);
+            LinearLayout layout = (LinearLayout) toast.getView();
+            if (layout.getChildCount() > 0) {
+                TextView tv = (TextView) layout.getChildAt(0);
+                tv.setGravity(Gravity.CENTER_HORIZONTAL);
+            }
             toast.show();
             addSongConstraint.setVisibility(View.INVISIBLE);
             addLyric.setText("");
