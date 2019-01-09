@@ -1,10 +1,12 @@
 package uk.ac.kent.jds27.demolyric;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -19,10 +21,20 @@ public class GameScreen extends AppCompatActivity {
 
     private final Play play = new Play();
     private final ArrayList<String> addSongs = new ArrayList<>();
+    private final ArrayList<String> tempSongs = new ArrayList<>();
     private TextView lyricString;
     private TextView turnCount;
     private Button nextButton;
     private Button playAgainButton;
+    private Button fiveButton;
+    private Button sixButton;
+    private Button sevenButton;
+    private Button eightButton;
+    private Button nineButton;
+    private Button twentyButton;
+    private Button tenButton;
+    private Button submitDecade;
+    private Button homeButton;
     private TextView timer;
     private Button turnSubmit;
     private Button timeSubmit;
@@ -31,8 +43,10 @@ public class GameScreen extends AppCompatActivity {
     private int count = 0;
     private int goCount = 20;
     private int timeCount = 11000;
-    private int listSize = play.getListSize();
+    private int listSize = tempSongs.size();
     private CountDownTimer cTimer;
+    private LyricAndAnswers la = new LyricAndAnswers();
+    private boolean fiveClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +62,16 @@ public class GameScreen extends AppCompatActivity {
         cTimer = null;
         timeSubmit = findViewById(R.id.timeSubmit);
         editTime = findViewById(R.id.editTime);
-        haveGo(nextButton);
+        fiveButton = findViewById(R.id.fiveButton);
+        sixButton = findViewById(R.id.sixButton);
+        sevenButton = findViewById(R.id.sevenButton);
+        eightButton = findViewById(R.id.eightButton);
+        nineButton = findViewById(R.id.nineButton);
+        twentyButton = findViewById(R.id.twentyButton);
+        tenButton = findViewById(R.id.tenButton);
+        submitDecade = findViewById(R.id.submitDecade);
+        fiveClicked = false;
+        homeButton = findViewById(R.id.homeButton);
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -61,11 +84,15 @@ public class GameScreen extends AppCompatActivity {
             cTimer.cancel();
         }
         if (count > goCount) {
+            listSize = tempSongs.size();
             lyricString.setText(getString(R.string.game_complete));
             nextButton.setVisibility(View.INVISIBLE);
-            playAgainButton.setVisibility(View.VISIBLE);
+            homeButton.setVisibility(View.VISIBLE);
+            if(listSize >= goCount) {
+                playAgainButton.setVisibility(View.VISIBLE);
+            }
         } else {
-            String turn = play.haveGo();
+            String turn = play.haveDecadeGo(tempSongs);
             lyricString.setText(turn);
             cTimer = new CountDownTimer(timeCount, 1000) {
 
@@ -88,6 +115,10 @@ public class GameScreen extends AppCompatActivity {
         haveGo(playAgainButton);
         nextButton.setVisibility(View.VISIBLE);
         playAgainButton.setVisibility(View.INVISIBLE);
+    }
+
+    public void goHome(View view) {
+        startActivity(new Intent(GameScreen.this, MainActivity.class));
     }
 
     public void changeTimeCount(View view) {
@@ -134,4 +165,101 @@ public class GameScreen extends AppCompatActivity {
         turnSubmit.setVisibility(View.INVISIBLE);
     }
 
+    public void addFifties(View view) {
+        if(fiveClicked == false) {
+            tempSongs.addAll(la.getFiveList());
+            fiveClicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
+
+    public void addSixties(View view) {
+        boolean clicked = false;
+        if(clicked == false) {
+            tempSongs.addAll(la.getSixList());
+            clicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
+
+    public void addSeventies(View view) {
+        boolean clicked = false;
+        if(clicked == false) {
+            tempSongs.addAll(la.getSevenList());
+            clicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }    }
+
+    public void addEighties(View view) {
+        boolean clicked = false;
+        if(clicked == false) {
+            tempSongs.addAll(la.getEightList());
+            clicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }    }
+
+    public void addNineties(View view) {
+        boolean clicked = false;
+        if(clicked == false) {
+            tempSongs.addAll(la.getNineList());
+            clicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }    }
+
+    public void addNoughties(View view) {
+        boolean clicked = false;
+        if(clicked == false) {
+            tempSongs.addAll(la.getTwentyList());
+            clicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }    }
+
+    public void addTens(View view) {
+        boolean clicked = false;
+        if(clicked == false) {
+            tempSongs.addAll(la.getTenList());
+            clicked = true;
+        }
+        else {
+            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
+            toast.show();
+        }    }
+
+    public void submitDecade(View view) {
+        if(tempSongs.size() < 20) {
+            Toast toast = Toast.makeText(this, "Please select an additional decade", Toast.LENGTH_LONG);
+            toast.show();
+        }
+        else {
+            fiveButton.setVisibility(View.INVISIBLE);
+            sixButton.setVisibility(View.INVISIBLE);
+            sevenButton.setVisibility(View.INVISIBLE);
+            eightButton.setVisibility(View.INVISIBLE);
+            nineButton.setVisibility(View.INVISIBLE);
+            twentyButton.setVisibility(View.INVISIBLE);
+            tenButton.setVisibility(View.INVISIBLE);
+            submitDecade.setVisibility(View.INVISIBLE);
+            nextButton.setVisibility(View.VISIBLE);
+            listSize = tempSongs.size();
+            haveGo(nextButton);
+        }
+    }
 }

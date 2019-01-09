@@ -32,6 +32,26 @@ class Game {
         }
     }
 
+    @SuppressWarnings("UnusedAssignment")
+    String randomDecadeLAA(ArrayList<String> array) {
+        if(array.size() > 0) {
+            int index = randomGenerator.nextInt(array.size());
+            if (index == 0) {
+                index++;
+                return lyricString;
+            } else {
+                lyricString = la.getDecadeLyric(array, index);
+                lyricInt = la.getIndexByDecadeLyric(array, lyricString);
+                System.out.println(lyricString);
+                array.remove(index);
+                return lyricString;
+            }
+        }
+        else {
+            return lyricString;
+        }
+    }
+
     void addLaa(String laa) {
         la.addLaa(laa);
     }

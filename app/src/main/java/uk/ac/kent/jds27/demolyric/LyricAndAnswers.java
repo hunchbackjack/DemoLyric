@@ -116,6 +116,9 @@ class LyricAndAnswers {
         eightLyrics.add("These girls are really sleazy, all they just say is please me, or spend some time and rock a rhyme, I said 'It's not that easy'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "It's Tricky - Run D.M.C (1986)");
         eightLyrics.add("She's been living in her white bread world as long as anyone with hot blood can and now she's looking for a downtown man, that's what I am" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Uptown Girl - Billy Joel (1983)");
         eightLyrics.add("Now, what you hear is not a test I'm rappin' to the beat, and me, the groove, and my friends are gonna try to move your feet" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Rappers Delight - The Sugarhill Gang (1980)");
+        eightLyrics.add("Baby, I'm hot just like an oven, I need some lovin'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Sexual Healing - Marvin Gaye (1982)");
+        eightLyrics.add("Gina works the diner all day working for her man she brings home her pay, for love" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Livin' On A Prayer - Bon Jovi (1986)");
+        eightLyrics.add("I've seen your flag on the marble arch, and love is not a victory march" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hallelujah - Leonard Cohen (1984)");
 
         //add lyrics to 1990's list
         nineLyrics.add("That's me in the corner, that's me in the spotlight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Losing My Religion - R.E.M (1991)");
@@ -123,15 +126,12 @@ class LyricAndAnswers {
         nineLyrics.add("I don't believe that anybody feels the way I do, about you now" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Wonderwall - Oasis (1995)");
         nineLyrics.add("You say we've got nothing in common, no common ground to start from" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Breakfast At Tiffany's - Deep Blue Something (1993)");
         nineLyrics.add("So I'll start a revolution from my bed, because you said the brains I had went to my head" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Don't Look Back In Anger - Oasis (1995)");
-        nineLyrics.add("Baby, I'm hot just like an oven, I need some lovin'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Sexual Healing - Marvin Gaye (1982)");
         nineLyrics.add("'Cause I knew it from the start, baby when you broke my heart" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Return Of The Mack - Mark Morrison (1996)");
         nineLyrics.add("Hell, with it baby cause you're fun and you're mine and you look so divine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Come And Get Your Love - Redbone (1973)");
         nineLyrics.add("I said maybe I don't really wanna know how your garden grows 'cause I just want to fly" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Live Forever - Oasis (1994)");
         nineLyrics.add("I don't know what they want from me, it's like the more money we come across the more problems we see" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Mo Money Mo Problems - The Notorious B.I.G (1997)");
         nineLyrics.add("My anaconda don't want none unless you got buns hun" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Baby Got Back - Sir Mix-A-Lot (1992)");
         nineLyrics.add("Am I your fire? Your one desire" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Want It That Way - The Backstreet Boys (1999)");
-        nineLyrics.add("Gina works the diner all day working for her man she brings home her pay, for love" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Livin' On A Prayer - Bon Jovi (1986)");
-        nineLyrics.add("I've seen your flag on the marble arch, and love is not a victory march" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hallelujah - Leonard Cohen (1984)");
         nineLyrics.add("Trying to make ends meet, you're a slave to the money and then you die" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bittersweet Symphony - The Verve (1997)");
         nineLyrics.add("And down the waterfall wherever it may take me I know that life won't break me" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Angels - Robbie Williams (1997)");
         nineLyrics.add("I'm worse at what I do best and for this gift I feel blessed" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Smells Like Teen Spirit - Nirvana (1991)");
@@ -199,7 +199,6 @@ class LyricAndAnswers {
         twentyLyrics.add("Nobody wanta' see us together, nobody thought that we'd last forever, I feel them hoping and praying" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Don't Matter - Akon (2006)");
         twentyLyrics.add("Promise I'll be kind, but I won't stop until that boy is mine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Paparazzi - Lady Gaga (2008)");
         twentyLyrics.add("I drove for miles and miles and wound up at your door. I've had you so many times but somehow I want more" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "She Will Be Loved - Maroon 5 (2002)");
-        twentyLyrics.add("Everybody's looking for love, oh, oh, ain't that the reason you're at this club" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "In My Head - Jason Derulo (2010)");
         twentyLyrics.add("Chill out, what you yelling for? Lay back, it's all been done before" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Complicated - Avril Lavigne (2002)");
         twentyLyrics.add("Tomorrow's getting harder, make no mistake, luck ain't enough you've got to make your own breaks" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "It's My Life - Bon Jovi (2000)");
         twentyLyrics.add("Control yourself, take only what you need from it. A family of trees wanting to be haunted" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Kids - MGMT (2008)");
@@ -223,7 +222,6 @@ class LyricAndAnswers {
         twentyLyrics.add("I said tell me your name is it sweet? She said my boy it's Dagger" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Chelsea Dagger - The Fratellis (2006)");
         twentyLyrics.add("Send in your skeletons, sing as their bones go marching in, again" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "The Pretender - Foo Fighters (2007)");
         twentyLyrics.add("I backed my car into a cop car the other day, well, he just drove off - sometimes life's okay" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Float On - Modest Mouse (2004)");
-        twentyLyrics.add("And I know she'll be the death of me, at least we'll both be numb. And she'll always get the best of me, the worst is yet to come" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Can't Feel My Face - The Weeknd (2015)");
         twentyLyrics.add("Love forever, love has freely turned forever you and me. Windmill, windmill for the land, is everybody in?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Feel Good Inc - Gorillaz (2005)");
         twentyLyrics.add("Let's get lost tonight, you could be my black Kate Moss tonight. Play secretary, I'm the boss tonight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Stronger - Kanye West (2007)");
         twentyLyrics.add("Everybody wants to know her name, how does she cope with her new found fame?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Five Colours In Her Hair - McFly (2004)");
@@ -231,6 +229,8 @@ class LyricAndAnswers {
         twentyLyrics.add("And I'm talking to myself at night because I can't forget. Back and forth through my mind behind a cigarette" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Seven Nation Army - The White Stripes (2003)");
 
         //add lyrics to 2010's list
+        tenLyrics.add("And I know she'll be the death of me, at least we'll both be numb. And she'll always get the best of me, the worst is yet to come" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Can't Feel My Face - The Weeknd (2015)");
+        tenLyrics.add("Everybody's looking for love, oh, oh, ain't that the reason you're at this club" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "In My Head - Jason Derulo (2010)");
         tenLyrics.add("Maybe I'm foolish, maybe I'm blind, thinking I can see through this" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Human - Rag'N'Bone Man (2017)");
         tenLyrics.add("Drink some Margaritas by a string of blue lights, listen to the Mariachi play at midnight" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Are You With Me - Lost Frequencies (2014)");
         tenLyrics.add("I'm breaking in, shaping up, then checking out on the prison bus" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Radioactive - Imagine Dragons (2012)");
@@ -346,6 +346,25 @@ class LyricAndAnswers {
         for (String lyric : lyrics) {
             if (Objects.equals(lyric, lyricName)) {
                 lyricIndex = lyrics.indexOf(lyric);
+            }
+        }
+        return lyricIndex;
+    }
+
+    String getDecadeLyric(ArrayList<String> array, int index) {
+        String randomLyric = null;
+        for (String lyric : array) {
+            if (index == array.indexOf(lyric)) {
+                randomLyric = lyric;
+            }
+        }
+        return randomLyric;
+    }
+
+    int getIndexByDecadeLyric(ArrayList<String> array, String lyricName) {
+        for (String lyric : array) {
+            if (Objects.equals(lyric, lyricName)) {
+                lyricIndex = array.indexOf(lyric);
             }
         }
         return lyricIndex;

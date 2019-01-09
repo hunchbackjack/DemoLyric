@@ -13,6 +13,10 @@ class Play {
         return game.randomLAA();
     }
 
+    String haveDecadeGo(ArrayList<String> array) {
+        return game.randomDecadeLAA(array);
+    }
+
     void reset() {
         game = new Game();
     }
