@@ -26,10 +26,6 @@ public class GameScreen extends AppCompatActivity {
     private TextView timer;
     private Button turnSubmit;
     private Button timeSubmit;
-    private ConstraintLayout addSongConstraint;
-    private EditText addLyric;
-    private EditText addSong;
-    private EditText addArtist;
     private EditText editTurn;
     private EditText editTime;
     private int count = 0;
@@ -46,10 +42,6 @@ public class GameScreen extends AppCompatActivity {
         turnCount = findViewById(R.id.turnCount);
         nextButton = findViewById(R.id.nextButton);
         playAgainButton = findViewById(R.id.playAgainButton);
-        addSongConstraint = findViewById(R.id.addSongConstraint);
-        addLyric = findViewById(R.id.addLyric);
-        addSong = findViewById(R.id.addSong);
-        addArtist = findViewById(R.id.addArtist);
         editTurn = findViewById(R.id.editTurn);
         turnSubmit = findViewById(R.id.turnSubmit);
         timer = findViewById(R.id.timer);
@@ -140,45 +132,6 @@ public class GameScreen extends AppCompatActivity {
 
         editTurn.setVisibility(View.INVISIBLE);
         turnSubmit.setVisibility(View.INVISIBLE);
-    }
-
-    public void addSong(View view) {
-        addSongConstraint.setVisibility(View.VISIBLE);
-    }
-
-    public void closeAddWindow(View view) {
-        addSongConstraint.setVisibility(View.INVISIBLE);
-        addLyric.setText("");
-        addSong.setText("");
-        addArtist.setText("");
-    }
-
-    public void submitSong(View view) {
-        String lyricString = addLyric.getText().toString();
-        String songString = addSong.getText().toString();
-        String artistString = addArtist.getText().toString();
-        if (lyricString.length() > 0 && songString.length() > 0 && artistString.length() > 0) {
-            String addString = (lyricString + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + songString + " - " + artistString);
-            play.addLaa(addString);
-            addSongs.add(addString);
-            listSize++;
-            String newSong = (addString.replaceFirst(System.lineSeparator(), ""));
-            String newSong1 = (newSong.replaceFirst(System.lineSeparator(), ""));
-            Toast toast = Toast.makeText(getApplicationContext(), newSong1, Toast.LENGTH_SHORT);
-            LinearLayout layout = (LinearLayout) toast.getView();
-            if (layout.getChildCount() > 0) {
-                TextView tv = (TextView) layout.getChildAt(0);
-                tv.setGravity(Gravity.CENTER_HORIZONTAL);
-            }
-            toast.show();
-            addSongConstraint.setVisibility(View.INVISIBLE);
-            addLyric.setText("");
-            addSong.setText("");
-            addArtist.setText("");
-        } else {
-            Toast errorToast = Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_LONG);
-            errorToast.show();
-        }
     }
 
 }

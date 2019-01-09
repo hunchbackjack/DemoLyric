@@ -1,7 +1,5 @@
 package uk.ac.kent.jds27.demolyric;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -36,7 +34,6 @@ class Game {
 
     void addLaa(String laa) {
         la.addLaa(laa);
-        Log.d("Game", "String: " + laa);
     }
 
     void addList(ArrayList<String> list) {

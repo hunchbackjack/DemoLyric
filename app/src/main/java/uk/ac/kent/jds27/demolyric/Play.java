@@ -1,7 +1,5 @@
 package uk.ac.kent.jds27.demolyric;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 
 class Play {
@@ -21,7 +19,6 @@ class Play {
 
     void addLaa(String laa) {
         game.addLaa(laa);
-        Log.d("Play", "String: " + laa);
     }
 
     void addList(ArrayList<String> list) {
