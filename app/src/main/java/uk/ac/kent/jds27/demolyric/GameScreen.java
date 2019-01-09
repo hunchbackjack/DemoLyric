@@ -47,6 +47,12 @@ public class GameScreen extends AppCompatActivity {
     private CountDownTimer cTimer;
     private LyricAndAnswers la = new LyricAndAnswers();
     private boolean fiveClicked;
+    private boolean sixClicked;
+    private boolean sevenClicked;
+    private boolean eightClicked;
+    private boolean nineClicked;
+    private boolean twentyClicked;
+    private boolean tenClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,10 +183,9 @@ public class GameScreen extends AppCompatActivity {
     }
 
     public void addSixties(View view) {
-        boolean clicked = false;
-        if(clicked == false) {
+        if(sixClicked == false) {
             tempSongs.addAll(la.getSixList());
-            clicked = true;
+            sixClicked = true;
         }
         else {
             Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
@@ -189,10 +194,9 @@ public class GameScreen extends AppCompatActivity {
     }
 
     public void addSeventies(View view) {
-        boolean clicked = false;
-        if(clicked == false) {
+        if(sevenClicked == false) {
             tempSongs.addAll(la.getSevenList());
-            clicked = true;
+            sevenClicked = true;
         }
         else {
             Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
@@ -200,10 +204,9 @@ public class GameScreen extends AppCompatActivity {
         }    }
 
     public void addEighties(View view) {
-        boolean clicked = false;
-        if(clicked == false) {
+        if(eightClicked == false) {
             tempSongs.addAll(la.getEightList());
-            clicked = true;
+            eightClicked = true;
         }
         else {
             Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
@@ -211,10 +214,9 @@ public class GameScreen extends AppCompatActivity {
         }    }
 
     public void addNineties(View view) {
-        boolean clicked = false;
-        if(clicked == false) {
+        if(nineClicked == false) {
             tempSongs.addAll(la.getNineList());
-            clicked = true;
+            nineClicked = true;
         }
         else {
             Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
@@ -222,10 +224,9 @@ public class GameScreen extends AppCompatActivity {
         }    }
 
     public void addNoughties(View view) {
-        boolean clicked = false;
-        if(clicked == false) {
+        if(twentyClicked == false) {
             tempSongs.addAll(la.getTwentyList());
-            clicked = true;
+            twentyClicked = true;
         }
         else {
             Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
@@ -233,10 +234,9 @@ public class GameScreen extends AppCompatActivity {
         }    }
 
     public void addTens(View view) {
-        boolean clicked = false;
-        if(clicked == false) {
+        if(tenClicked == false) {
             tempSongs.addAll(la.getTenList());
-            clicked = true;
+            tenClicked = true;
         }
         else {
             Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);

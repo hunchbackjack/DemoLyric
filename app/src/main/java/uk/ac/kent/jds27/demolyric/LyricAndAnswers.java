@@ -89,6 +89,7 @@ class LyricAndAnswers {
         sevenLyrics.add("See-saw swingin' with the boys in the school with your feet flyin' up in the air" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Walk This Way - Aerosmith (1975)");
         sevenLyrics.add("And in my hour of darkness she is standing right in front of me, speaking words of wisdom" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let It Be - The Beatles (1970)");
         sevenLyrics.add("Buddy, you're a young man, hard man, shouting in the street, gonna take on the world someday" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "We Will Rock You - Queen (1977)");
+        sevenLyrics.add("Hell, with it baby cause you're fun and you're mine and you look so divine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Come And Get Your Love - Redbone (1973)");
 
         //add lyrics to 1980's list
         eightLyrics.add("I said to the man 'are you trying to tempt me?'" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Down Under - Men At Work (1980)");
@@ -127,7 +128,6 @@ class LyricAndAnswers {
         nineLyrics.add("You say we've got nothing in common, no common ground to start from" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Breakfast At Tiffany's - Deep Blue Something (1993)");
         nineLyrics.add("So I'll start a revolution from my bed, because you said the brains I had went to my head" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Don't Look Back In Anger - Oasis (1995)");
         nineLyrics.add("'Cause I knew it from the start, baby when you broke my heart" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Return Of The Mack - Mark Morrison (1996)");
-        nineLyrics.add("Hell, with it baby cause you're fun and you're mine and you look so divine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Come And Get Your Love - Redbone (1973)");
         nineLyrics.add("I said maybe I don't really wanna know how your garden grows 'cause I just want to fly" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Live Forever - Oasis (1994)");
         nineLyrics.add("I don't know what they want from me, it's like the more money we come across the more problems we see" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Mo Money Mo Problems - The Notorious B.I.G (1997)");
         nineLyrics.add("My anaconda don't want none unless you got buns hun" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Baby Got Back - Sir Mix-A-Lot (1992)");
