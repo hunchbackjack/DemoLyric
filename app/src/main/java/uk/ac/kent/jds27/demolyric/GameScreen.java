@@ -4,14 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 @SuppressWarnings("unchecked")
@@ -24,14 +22,6 @@ public class GameScreen extends AppCompatActivity {
     private TextView turnCount;
     private Button nextButton;
     private Button playAgainButton;
-    private Button fiveButton;
-    private Button sixButton;
-    private Button sevenButton;
-    private Button eightButton;
-    private Button nineButton;
-    private Button twentyButton;
-    private Button tenButton;
-    private Button submitDecade;
     private Button homeButton;
     private TextView timer;
     private Button turnSubmit;
@@ -41,17 +31,9 @@ public class GameScreen extends AppCompatActivity {
     private int count = 0;
     private int goCount = 20;
     private int timeCount = 11000;
-    private int listSize = tempSongs.size();
-    private int tempListSize = 0;
+    private int listSize;
     private CountDownTimer cTimer;
     private final LyricAndAnswers la = new LyricAndAnswers();
-    private boolean fiveClicked;
-    private boolean sixClicked;
-    private boolean sevenClicked;
-    private boolean eightClicked;
-    private boolean nineClicked;
-    private boolean twentyClicked;
-    private boolean tenClicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,16 +49,30 @@ public class GameScreen extends AppCompatActivity {
         cTimer = null;
         timeSubmit = findViewById(R.id.timeSubmit);
         editTime = findViewById(R.id.editTime);
-        fiveButton = findViewById(R.id.fiveButton);
-        sixButton = findViewById(R.id.sixButton);
-        sevenButton = findViewById(R.id.sevenButton);
-        eightButton = findViewById(R.id.eightButton);
-        nineButton = findViewById(R.id.nineButton);
-        twentyButton = findViewById(R.id.twentyButton);
-        tenButton = findViewById(R.id.tenButton);
-        submitDecade = findViewById(R.id.submitDecade);
-        fiveClicked = false;
         homeButton = findViewById(R.id.homeButton);
+        if(DecadeSelect.fiveClicked) {
+            tempSongs.addAll(la.getFiveList());
+        }
+        if(DecadeSelect.sixClicked) {
+            tempSongs.addAll(la.getSixList());
+        }
+        if(DecadeSelect.sevenClicked) {
+            tempSongs.addAll(la.getSevenList());
+        }
+        if(DecadeSelect.eightClicked) {
+            tempSongs.addAll(la.getEightList());
+        }
+        if(DecadeSelect.nineClicked) {
+            tempSongs.addAll(la.getNineList());
+        }
+        if(DecadeSelect.twentyClicked) {
+            tempSongs.addAll(la.getTwentyList());
+        }
+        if(DecadeSelect.tenClicked) {
+            tempSongs.addAll(la.getTenList());
+        }
+        listSize = tempSongs.size();
+        haveGo(nextButton);
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -169,137 +165,5 @@ public class GameScreen extends AppCompatActivity {
 
         editTurn.setVisibility(View.INVISIBLE);
         turnSubmit.setVisibility(View.INVISIBLE);
-    }
-
-    public void addFifties(View view) {
-        if(!fiveClicked) {
-            fiveClicked = true;
-            fiveButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getFiveList().size();
-        }
-        else {
-            fiveButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            fiveClicked = false;
-            tempListSize -= la.getFiveList().size();
-        }
-    }
-
-    public void addSixties(View view) {
-        if(!sixClicked) {
-            sixClicked = true;
-            sixButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getSixList().size();
-        }
-        else {
-            sixButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            sixClicked = false;
-            tempListSize -= la.getSixList().size();
-        }
-    }
-
-    public void addSeventies(View view) {
-        if(!sevenClicked) {
-            sevenClicked = true;
-            sevenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getSevenList().size();
-        }
-        else {
-            sevenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            sevenClicked = false;
-            tempListSize -= la.getSevenList().size();
-        }
-    }
-
-    public void addEighties(View view) {
-        if(!eightClicked) {
-            eightClicked = true;
-            eightButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getEightList().size();
-        }
-        else {
-            eightButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            eightClicked = false;
-            tempListSize -= la.getEightList().size();
-        }
-    }
-
-    public void addNineties(View view) {
-        if(!nineClicked) {
-            nineClicked = true;
-            nineButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getNineList().size();
-        }
-        else {
-            nineButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            nineClicked = false;
-            tempListSize -= la.getNineList().size();
-        }
-    }
-
-    public void addNoughties(View view) {
-        if(!twentyClicked) {
-            twentyClicked = true;
-            twentyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getTwentyList().size();
-        }
-        else {
-            twentyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            twentyClicked = false;
-            tempListSize -= la.getTwentyList().size();
-        }
-    }
-
-    public void addTens(View view) {
-        if(!tenClicked) {
-            tenClicked = true;
-            tenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            tempListSize += la.getTenList().size();
-        }
-        else {
-            tenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
-            tenClicked = false;
-            tempListSize -= la.getTenList().size();
-        }
-    }
-
-    public void submitDecade(View view) {
-        if(tempListSize < 20) {
-            Toast toast = Toast.makeText(this, "Please select an additional decade", Toast.LENGTH_LONG);
-            toast.show();
-        }
-        else {
-            if(fiveClicked) {
-                tempSongs.addAll(la.getFiveList());
-            }
-            if(sixClicked) {
-                tempSongs.addAll(la.getSixList());
-            }
-            if(sevenClicked) {
-                tempSongs.addAll(la.getSevenList());
-            }
-            if(eightClicked) {
-                tempSongs.addAll(la.getEightList());
-            }
-            if(nineClicked) {
-                tempSongs.addAll(la.getNineList());
-            }
-            if(twentyClicked) {
-                tempSongs.addAll(la.getTwentyList());
-            }
-            if(tenClicked) {
-                tempSongs.addAll(la.getTenList());
-            }
-            fiveButton.setVisibility(View.INVISIBLE);
-            sixButton.setVisibility(View.INVISIBLE);
-            sevenButton.setVisibility(View.INVISIBLE);
-            eightButton.setVisibility(View.INVISIBLE);
-            nineButton.setVisibility(View.INVISIBLE);
-            twentyButton.setVisibility(View.INVISIBLE);
-            tenButton.setVisibility(View.INVISIBLE);
-            submitDecade.setVisibility(View.INVISIBLE);
-            nextButton.setVisibility(View.VISIBLE);
-            listSize = tempSongs.size();
-            haveGo(nextButton);
-        }
     }
 }

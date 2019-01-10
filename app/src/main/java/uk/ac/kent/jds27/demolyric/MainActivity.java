@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, GameScreen.class));
+                startActivity(new Intent(MainActivity.this, DecadeSelect.class));
             }
         });
     }
