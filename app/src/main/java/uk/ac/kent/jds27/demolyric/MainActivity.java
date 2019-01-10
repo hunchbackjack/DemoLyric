@@ -108,8 +108,4 @@ public class MainActivity extends AppCompatActivity {
         howToConstraint.setVisibility(View.INVISIBLE);
     }
 
-    public Play getPlay() {
-        return play;
-    }
-
 }

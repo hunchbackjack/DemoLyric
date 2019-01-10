@@ -11,7 +11,6 @@
     <string name="cancel">Cancel</string>
     <string name="game_complete">Game Complete!</string>
     <string name="next">Next</string>
-    <string name="submit">Submit</string>
     <string name="x">x</string>
     <string name="turnChange">To change the number of turns, press Play and then click on the turn counter in the bottom left hand corner. Please note, this will not take effect until the next go.</string>
     <string name="addSong">To add your own lyrics, press the + button in the top left had corner. Note that this will only add the song for the current game.</string>
@@ -20,4 +19,13 @@
     <string name="amount_of_turns">Amount of turns</string>
     <string name="set_timer">Set timer</string>
     <string name="songs">Songs</string>
+    <string name="_50_s">50\'s</string>
+    <string name="_60_s">60\'s</string>
+    <string name="_70_s">70\'s</string>
+    <string name="_80_s">80\'s</string>
+    <string name="_90_s">90\'s</string>
+    <string name="_00_s">00\'s</string>
+    <string name="_10_s">10\'s</string>
+    <string name="home">Home</string>
+    <string name="submit">Submit</string>
 </resources>

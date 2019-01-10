@@ -4,19 +4,17 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.constraint.ConstraintLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("unchecked")
 public class GameScreen extends AppCompatActivity {
 
     private final Play play = new Play();
@@ -44,8 +42,9 @@ public class GameScreen extends AppCompatActivity {
     private int goCount = 20;
     private int timeCount = 11000;
     private int listSize = tempSongs.size();
+    private int tempListSize = 0;
     private CountDownTimer cTimer;
-    private LyricAndAnswers la = new LyricAndAnswers();
+    private final LyricAndAnswers la = new LyricAndAnswers();
     private boolean fiveClicked;
     private boolean sixClicked;
     private boolean sevenClicked;
@@ -121,6 +120,7 @@ public class GameScreen extends AppCompatActivity {
         haveGo(playAgainButton);
         nextButton.setVisibility(View.VISIBLE);
         playAgainButton.setVisibility(View.INVISIBLE);
+        homeButton.setVisibility(View.INVISIBLE);
     }
 
     public void goHome(View view) {
@@ -172,83 +172,123 @@ public class GameScreen extends AppCompatActivity {
     }
 
     public void addFifties(View view) {
-        if(fiveClicked == false) {
-            tempSongs.addAll(la.getFiveList());
+        if(!fiveClicked) {
             fiveClicked = true;
+            fiveButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getFiveList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
+            fiveButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            fiveClicked = false;
+            tempListSize -= la.getFiveList().size();
         }
     }
 
     public void addSixties(View view) {
-        if(sixClicked == false) {
-            tempSongs.addAll(la.getSixList());
+        if(!sixClicked) {
             sixClicked = true;
+            sixButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getSixList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
+            sixButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            sixClicked = false;
+            tempListSize -= la.getSixList().size();
         }
     }
 
     public void addSeventies(View view) {
-        if(sevenClicked == false) {
-            tempSongs.addAll(la.getSevenList());
+        if(!sevenClicked) {
             sevenClicked = true;
+            sevenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getSevenList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
-        }    }
+            sevenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            sevenClicked = false;
+            tempListSize -= la.getSevenList().size();
+        }
+    }
 
     public void addEighties(View view) {
-        if(eightClicked == false) {
-            tempSongs.addAll(la.getEightList());
+        if(!eightClicked) {
             eightClicked = true;
+            eightButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getEightList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
-        }    }
+            eightButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            eightClicked = false;
+            tempListSize -= la.getEightList().size();
+        }
+    }
 
     public void addNineties(View view) {
-        if(nineClicked == false) {
-            tempSongs.addAll(la.getNineList());
+        if(!nineClicked) {
             nineClicked = true;
+            nineButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getNineList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
-        }    }
+            nineButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            nineClicked = false;
+            tempListSize -= la.getNineList().size();
+        }
+    }
 
     public void addNoughties(View view) {
-        if(twentyClicked == false) {
-            tempSongs.addAll(la.getTwentyList());
+        if(!twentyClicked) {
             twentyClicked = true;
+            twentyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getTwentyList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
-        }    }
+            twentyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            twentyClicked = false;
+            tempListSize -= la.getTwentyList().size();
+        }
+    }
 
     public void addTens(View view) {
-        if(tenClicked == false) {
-            tempSongs.addAll(la.getTenList());
+        if(!tenClicked) {
             tenClicked = true;
+            tenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            tempListSize += la.getTenList().size();
         }
         else {
-            Toast toast = Toast.makeText(this, "Decade already added", Toast.LENGTH_LONG);
-            toast.show();
-        }    }
+            tenButton.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            tenClicked = false;
+            tempListSize -= la.getTenList().size();
+        }
+    }
 
     public void submitDecade(View view) {
-        if(tempSongs.size() < 20) {
+        if(tempListSize < 20) {
             Toast toast = Toast.makeText(this, "Please select an additional decade", Toast.LENGTH_LONG);
             toast.show();
         }
         else {
+            if(fiveClicked) {
+                tempSongs.addAll(la.getFiveList());
+            }
+            if(sixClicked) {
+                tempSongs.addAll(la.getSixList());
+            }
+            if(sevenClicked) {
+                tempSongs.addAll(la.getSevenList());
+            }
+            if(eightClicked) {
+                tempSongs.addAll(la.getEightList());
+            }
+            if(nineClicked) {
+                tempSongs.addAll(la.getNineList());
+            }
+            if(twentyClicked) {
+                tempSongs.addAll(la.getTwentyList());
+            }
+            if(tenClicked) {
+                tempSongs.addAll(la.getTenList());
+            }
             fiveButton.setVisibility(View.INVISIBLE);
             sixButton.setVisibility(View.INVISIBLE);
             sevenButton.setVisibility(View.INVISIBLE);

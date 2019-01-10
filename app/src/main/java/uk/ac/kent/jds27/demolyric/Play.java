@@ -9,10 +9,6 @@ class Play {
         game = new Game();
     }
 
-    String haveGo() {
-        return game.randomLAA();
-    }
-
     String haveDecadeGo(ArrayList<String> array) {
         return game.randomDecadeLAA(array);
     }
@@ -27,9 +23,5 @@ class Play {
 
     void addList(ArrayList<String> list) {
         game.addList(list);
-    }
-
-    int getListSize() {
-        return game.getListSize();
     }
 }
