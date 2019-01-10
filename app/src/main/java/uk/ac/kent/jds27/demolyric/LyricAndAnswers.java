@@ -35,6 +35,27 @@ class LyricAndAnswers {
 
         //add lyrics to 1950's list
         fiveLyrics.add("Who never ever learned to read or write so well, but he could play a guitar just like a-ringin' a bell" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Johnny B. Goode - Chuck Berry (1958)");
+        fiveLyrics.add("Yeah they said you was high-classed, well, that was just a lie. Well, you ain't never caught a rabbit and you ain't no friend of mine" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hound Dog - Big Mama Thornton (1953)");
+        fiveLyrics.add("You shake my nerves and you rattle my brain, too much love drives a man insane. You broke my will, oh what a thrill" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Great Balls Of Fire - Jerry Lee Lewis (1957)");
+        fiveLyrics.add("Got a girl named Sue, she knows just what to do. She rock to the east, she rocks to the west but she's the girl that I know best" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Tutti Frutti - Little Richard (1957)");
+        fiveLyrics.add("Well, my mom and pop told me, 'son, you gotta make some money' if you want to use the car to go ridin' next Sunday" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Summertime Blues - Eddie Cochran (1958)");
+        fiveLyrics.add("At first I thought it was infatuation but, woo, it's lasted so long. Now I find myself wanting to marry you and take you home" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "You Send Me - Sam Cooke (1957)");
+        fiveLyrics.add("When tears come down like falling rain, you'll toss around and call my name" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Your Cheatin' Heart - Hank Williams (1952)");
+        fiveLyrics.add("Always though it's crowded, you still can find some room. Those broken-hearted lovers cry away there in their gloom" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Heartbreak Hotel - Elvis Presley (1956)");
+        fiveLyrics.add("Well, you can knock me down, step in my face, slander my name all over the place" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Blue Suede Shoes - Carl Perkins (1955)");
+        fiveLyrics.add("I got the rockin' pneumonia, I need a shot of rhythm and blues" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Roll Over Beethoven - Chuck Berry (1956)");
+        fiveLyrics.add("Train I ride, sixteen coaches long. Well, that long black train got my baby and gone" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Mystery Train - Junior Parker (1953)");
+        fiveLyrics.add("I want you to know, I said I want you to know right now, yeah! You been good to me baby, better than I been to myself" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Shout - The Isley Brothers (1959)");
+        fiveLyrics.add("Tombstone hand and a graveyard mine, just 22 and I don't mind dying" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Who Do You Love? - Bo Diddley (1956)");
+        fiveLyrics.add("Well, I said come on over baby, we got chicken in the barn. Come on over baby, I got the bull by the horns" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Whole Lotta Shakin' Goin' On - Big Maybelle (1955)");
+        fiveLyrics.add("I never kissed a bear, I never kissed a goon, but I can shake a chicken in the middle of the room" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Let's Have A Party - Elvis Presley (1957)");
+        fiveLyrics.add("I keep a close watch on this heart of mine, I keep my eyes wide open all the time" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "I Walk The Line - Johnny Cash (1956)");
+        fiveLyrics.add("Love is ended before it's begun, and too many moonlight kisses seem to cool in the warmth of the sun" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "When I Fall In Love - Doris Day (1952)");
+        fiveLyrics.add("Let's walk up to the preacher and let us say 'I do', then you'll know you'll have me and I'll know that I'll have you" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Don't Be Cruel - Elvis Presley (1956)");
+        fiveLyrics.add("The warden threw a party in the county jail, the prison band was there and they began to wail" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Jailhouse Rock - Elvis Presley (1957)");
+        fiveLyrics.add("My darling dear, love you all the time. I'm just a fool, a fool in love with you." + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Earth Angel - The Penguins (1954)");
+        fiveLyrics.add("When the clock strikes two, three and four, if the band slows down we'll yell for more" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Rock Around The Clock - Bill Haley & His Comets (1954)");
+        fiveLyrics.add("Too real is this feeling of make believe, too real when I feel what my heart can't conceal" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "The Great Pretender - The Platters (1955)");
 
         //add lyrics to 1960's list
         sixLyrics.add("Some folks are born silver spoon in hand, Lord don't they help themselves, oh" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Fortunate Son - Creedence Clearwater Revival (1969)");
@@ -149,6 +170,7 @@ class LyricAndAnswers {
         nineLyrics.add("But you won't get a crumb from me 'cause I'm from the streets of Compton" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Forgot About Dre - Dr. Dre (1999)");
         nineLyrics.add("Thoughts arrive like butterflies oh he don't know, so he chases them away" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Even Flow - Pearl Jam (1991)");
         nineLyrics.add("Say it ain't so, I will not go, turn the lights off, carry me home" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "All The Small Things - Blink-182 (1999)");
+        nineLyrics.add("What have I become, my sweetest friend. Everyone I know goes away in the end" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hurt - Nine Inch Nails (1994)");
 
         //add lyrics to 2000's list
         twentyLyrics.add("Soft lips are open, them knuckles are pale. Feels like you're dying, you're dying" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Sex On Fire - Kings Of Leon (2008)");
@@ -190,7 +212,6 @@ class LyricAndAnswers {
         twentyLyrics.add("I want your ugly, I want your disease, I want your everything as long as it's free" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Bad Romance - Lady Gaga (2009)");
         twentyLyrics.add("When the sun shines, we shine together, told you I'll be here forever" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Umbrella - Rihanna (2007)");
         twentyLyrics.add("Yeah I was out of touch, but it wasn't because I didn't know enough, I just knew too much" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Crazy - Gnarls Barkley (2006)");
-        twentyLyrics.add("What have I become, my sweetest friend. Everyone I know goes away in the end" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Hurt - Johnny Cash (2003)");
         twentyLyrics.add("My life is brilliant, my love is pure. I saw an angel, of that I'm sure" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "You're Beautiful - James Blunt (2004)");
         twentyLyrics.add("People killin', people dyin', children hurt can you hear them cryin'?" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Where Is The Love? - Black Eyed Peas (2003)");
         twentyLyrics.add("Slamming Bentley doors, hopping out of Porsche's, popping up on Forbes lists, gorgeous, hold up" + System.lineSeparator() + System.lineSeparator() + System.lineSeparator() + "Young Forever - Jay-Z (2009)");
