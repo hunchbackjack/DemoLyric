@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private final Play play = new Play();
     private final ArrayList<String> addSongs = new ArrayList<>();
     private Button playButton;
+    private Button play2Button;
     private Button songButton;
     private ConstraintLayout addSongConstraint;
     private ConstraintLayout howToConstraint;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         playButton = findViewById(R.id.playButton);
+        play2Button = findViewById(R.id.play2Button);
         addSongConstraint = findViewById(R.id.addSongConstraint);
         addLyric = findViewById(R.id.addLyric);
         addSong = findViewById(R.id.addSong);
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         songButton = findViewById(R.id.songButton);
 
         configurePlayButton();
+        configurePlay2Button();
         configureSongsButton();
     }
 
@@ -49,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, DecadeSelect.class));
+            }
+        });
+    }
+
+    private void configurePlay2Button() {
+        play2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AltGameScreen.class));
             }
         });
     }

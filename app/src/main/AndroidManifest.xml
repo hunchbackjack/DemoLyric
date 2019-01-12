@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -25,12 +26,15 @@
             android:name=".GameScreen"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="landscape"
-            android:theme="@style/AppThemeNoTitle"/>
-        <activity android:name=".SongActivity"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name=".SongActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".DecadeSelect"
+        <activity
+            android:name=".DecadeSelect"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
+        <activity android:name=".AltGameScreen"></activity>
     </application>
 
 </manifest>

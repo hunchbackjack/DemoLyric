@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="16dp"
         android:background="@color/colorPrimary"
         android:text="@string/songs"
@@ -54,11 +54,13 @@
     <Button
         android:id="@+id/addButton"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="40dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_settings_black_24dp"
+        android:backgroundTint="@android:color/darker_gray"
         android:onClick="addSong"
-        android:text="@string/plus"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="30sp"
@@ -157,8 +159,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/addTitle"
@@ -178,17 +182,16 @@
 
         <EditText
             android:id="@+id/addLyric"
-            android:layout_width="215dp"
+            android:layout_width="0dp"
             android:layout_height="46dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="@string/lyric"
             android:importantForAutofill="no"
             android:inputType="textLongMessage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addTitle"
             tools:ignore="UnusedAttribute" />
@@ -199,13 +202,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="@string/song_title"
             android:importantForAutofill="no"
             android:inputType="textLongMessage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addLyric"
             tools:ignore="UnusedAttribute" />
@@ -256,5 +258,22 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/play2Button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Play 2"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/songButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton" />
 
 </android.support.constraint.ConstraintLayout>
