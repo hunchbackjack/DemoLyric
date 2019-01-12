@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 @SuppressWarnings("unchecked")
@@ -18,8 +19,6 @@ public class AltGameScreen extends AppCompatActivity {
     private final Play play = new Play();
     private final ArrayList<String> addSongs = new ArrayList<>();
     private final ArrayList<String> tempSongs = new ArrayList<>();
-    private String[] parts;
-    private String part1;
     private String turn;
     private TextView lyricString;
     private TextView turnCount;
@@ -99,8 +98,8 @@ public class AltGameScreen extends AppCompatActivity {
             }
         } else {
             turn = play.haveDecadeGo(tempSongs);
-            parts = turn.split(System.lineSeparator());
-            part1 = parts[0];
+            String[] parts = turn.split(System.lineSeparator());
+            String part1 = parts[0];
             lyricString.setText(part1);
             nextButton.setVisibility(View.INVISIBLE);
             showButton.setVisibility(View.VISIBLE);

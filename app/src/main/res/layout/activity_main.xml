@@ -269,7 +269,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
-        android:text="Play 2"
+        android:text="@string/play_2"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/songButton"
         app:layout_constraintEnd_toEndOf="parent"

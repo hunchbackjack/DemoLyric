@@ -79,7 +79,7 @@
             android:layout_marginBottom="8dp"
             android:background="@color/colorPrimary"
             android:onClick="showAnswer"
-            android:text="Show"
+            android:text="@string/show"
             android:textColor="@android:color/background_light"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"

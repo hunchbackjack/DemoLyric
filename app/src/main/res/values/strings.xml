@@ -2,7 +2,6 @@
     <string name="app_name">Name That Song</string>
     <string name="play">Play</string>
     <string name="play_again">Play again?</string>
-    <string name="plus">+</string>
     <string name="add_song">Add Song</string>
     <string name="lyric">Lyric</string>
     <string name="song_title">Song Title</string>
@@ -28,4 +27,6 @@
     <string name="_10_s">10\'s</string>
     <string name="home">Home</string>
     <string name="submit">Submit</string>
+    <string name="show">Show</string>
+    <string name="play_2">Play 2</string>
 </resources>

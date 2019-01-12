@@ -34,7 +34,7 @@
             android:name=".DecadeSelect"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
-        <activity android:name=".AltGameScreen"></activity>
+        <activity android:name=".AltGameScreen" />
     </application>
 
 </manifest>
