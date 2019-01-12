@@ -145,7 +145,12 @@ public class DecadeSelect extends AppCompatActivity {
             toast.show();
         }
         else {
-            startActivity(new Intent(DecadeSelect.this, GameScreen.class));
+            if(!MainActivity.singlePlayer) {
+                startActivity(new Intent(DecadeSelect.this, GameScreen.class));
+            }
+            else if(MainActivity.singlePlayer) {
+                startActivity(new Intent(DecadeSelect.this, AltGameScreen.class));
+            }
         }
     }
 }

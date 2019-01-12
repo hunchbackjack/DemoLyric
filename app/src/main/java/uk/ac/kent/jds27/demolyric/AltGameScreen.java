@@ -54,8 +54,28 @@ public class AltGameScreen extends AppCompatActivity {
         timeSubmit = findViewById(R.id.altTimeSubmit);
         editTime = findViewById(R.id.altEditTime);
         homeButton = findViewById(R.id.altHomeButton);
-        tempSongs.addAll(la.getLyricsList());
         showButton = findViewById(R.id.showButton);
+        if(DecadeSelect.fiveClicked) {
+            tempSongs.addAll(la.getFiveList());
+        }
+        if(DecadeSelect.sixClicked) {
+            tempSongs.addAll(la.getSixList());
+        }
+        if(DecadeSelect.sevenClicked) {
+            tempSongs.addAll(la.getSevenList());
+        }
+        if(DecadeSelect.eightClicked) {
+            tempSongs.addAll(la.getEightList());
+        }
+        if(DecadeSelect.nineClicked) {
+            tempSongs.addAll(la.getNineList());
+        }
+        if(DecadeSelect.twentyClicked) {
+            tempSongs.addAll(la.getTwentyList());
+        }
+        if(DecadeSelect.tenClicked) {
+            tempSongs.addAll(la.getTenList());
+        }
         listSize = tempSongs.size();
         haveGo(nextButton);
     }

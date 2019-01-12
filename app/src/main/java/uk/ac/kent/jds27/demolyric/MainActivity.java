@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText addLyric;
     private EditText addSong;
     private EditText addArtist;
+    public static boolean singlePlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, DecadeSelect.class));
+                singlePlayer = false;
             }
         });
     }
@@ -60,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         play2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, AltGameScreen.class));
+                startActivity(new Intent(MainActivity.this, DecadeSelect.class));
+                singlePlayer = true;
             }
         });
     }
